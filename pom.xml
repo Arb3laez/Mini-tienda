@@ -5,15 +5,16 @@
     
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>com.codeup</groupId>
-    <artifactId>Mini-store
-    </artifactId>
+    <groupId>com.mycompany.tienda</groupId>
+    <artifactId>mini-store</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mainClass>com.codeup.ministorew4.App</exec.mainClass>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <exec.mainClass>com.mycompany.tienda.mini.App</exec.mainClass>
     </properties>
     
     <dependencies>
@@ -35,6 +36,14 @@
                     <source>17</source>
                     <target>17</target>
                     <release>17</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>${exec.mainClass}</mainClass>
                 </configuration>
             </plugin>
         </plugins>
