@@ -65,7 +65,7 @@ public class InventoryServiceImpl implements InventoryService {
 
     @Override
     public String showInventory() {
-        StringBuilder sb = new StringBuilder("***      INVENTORY      ***\n\n");
+        StringBuilder sb = new StringBuilder("    INVENTORi \n\n");
         List<Product> products = repo.searchAll();
 
         if (products.isEmpty()) {
@@ -89,7 +89,7 @@ public class InventoryServiceImpl implements InventoryService {
         if (results.isEmpty())
             return "Product not found in the inventory";
 
-        StringBuilder sb = new StringBuilder("***      SEARCH RESULTS      ***\n\n");
+        StringBuilder sb = new StringBuilder("  SEARCH RESULTS      \n\n");
         for (Product p : results) {
             sb.append(p.getDescription()).append(" | Stock: ").append(p.getStock()).append("\n");
         }
@@ -129,7 +129,7 @@ public class InventoryServiceImpl implements InventoryService {
         totalPurchases += subtotal;
         purchaseHistory.add(productFound.getName() + " x" + requiredQuantity + " = $" + subtotal);
 
-        StringBuilder ticket = new StringBuilder("***      PURCHASE TICKET      *** \n\n");
+        StringBuilder ticket = new StringBuilder("      TICKET PURCHASE      \n\n");
         ticket.append("Product: ").append(productFound.getName()).append("\n");
         ticket.append("Price: $").append(productFound.getPrice()).append("\n");
         ticket.append("Quantity: ").append(requiredQuantity).append("\n");
@@ -156,7 +156,7 @@ public class InventoryServiceImpl implements InventoryService {
                 cheapest = product;
             }
         }
-        StringBuilder stats = new StringBuilder("***      STATISTICS      ***\n\n");
+        StringBuilder stats = new StringBuilder("   STATISTICS      \n\n");
         stats.append("Most Expensive:\n  - ")
                 .append(mostExpensive.getName())
                 .append(": $").append(mostExpensive.getPrice())
@@ -174,12 +174,12 @@ public class InventoryServiceImpl implements InventoryService {
         if (purchaseHistory.isEmpty()) {
             return "No purchases made";
         }
-        StringBuilder ticket = new StringBuilder("===== FINAL TICKET =====\n\n");
+        StringBuilder ticket = new StringBuilder(" FINAL TICKET \n\n");
         for (String purchase : purchaseHistory) {
             ticket.append(purchase).append("\n");
         }
-        ticket.append("\n-----------------------\n");
-        ticket.append("TOTAL: $").append(totalPurchases);
+        ticket.append("\n-\n");
+        ticket.append("T0TAL: $").append(totalPurchases);
         return ticket.toString();
     }
 }

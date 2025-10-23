@@ -205,7 +205,7 @@ public class JdbcProductoRepository implements ProductService {
                 warranty = 0;
             return new Appliance(id, name, price, category, stock, warranty);
         } else {
-            // Si por alguna razón no hay tipo, devolver Food-like básico con expiration
+            // Bueno, alguna razón no hay tipo, devolver Food-like básico con expiration
             // null
             return new Food(id, name, price, category, stock, expirationDate == null ? "" : expirationDate) {
                 @Override

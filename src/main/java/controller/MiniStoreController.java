@@ -10,7 +10,7 @@ import service.ProductService;
 import service.impl.InventoryServiceImpl;
 
 /**
- * Controlador principal que maneja la lógica de la aplicación MiniStore
+ * Controlador principal que maneja la lógica de la aplicación 
  * Sigue el patrón MVC separando la lógica de negocio de la vista
  */
 
