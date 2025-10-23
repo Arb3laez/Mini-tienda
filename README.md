@@ -45,7 +45,8 @@ mvn clean install
 ### 4. Run the application
 
 ```bash
-mvn spring-boot:run
+mvn exec:java      
+
 ```
 
 **Or** using a script class:
@@ -61,7 +62,7 @@ Mini-tienda/
 ├── src/
 │   ├── main/
 │   │   ├── java/              # Source code (models, controllers, DAO/s)
-│   │   └── resources/         # Configuration and property files
+│   │   └── db.properties      # Configuration and property files
 │   └── test/                  # Unit tests
 ├── pom.xml                    # Maven configuration
 └── README.md                  # Package documentation
@@ -72,4 +73,5 @@ Mini-tienda/
 1. **Register a new product**
 2. **Check available inventory**
 3. **Register a customer and process a purchase**
+
 
