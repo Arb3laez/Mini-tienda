@@ -1,0 +1,10 @@
+ui
+repository
+util
+config
+controller
+service.impl
+service
+domain
+exception
+com.mycompany.tienda.mini
